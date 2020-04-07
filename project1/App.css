@@ -9,7 +9,14 @@
   align-items: center;
   position: relative;
 }
-.App-header button {
+.App-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1s linear;
+}
+.App-header .turn {
   border: none;
   background: rgb(240, 128, 128);
   color: black;
@@ -20,8 +27,54 @@
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 150px;
+  transition: all .5s linear;
 }
-.App-header button:active {
+.App-header .turn:active {
     background: rgb(165, 47, 47);
     color: white;
+}
+.App-header p {
+  transition: all .5s linear;
+  color: white;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.App-header .fontsizedown {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 10%;
+  border: 2px solid #093447;
+  background-color: #105170;
+  color: white;
+  font-size: 20px;
+  transition: all .1s linear;
+}
+.App-header .fontsizedown:active {
+  background-color: #0a3042;
+  letter-spacing: 1px;
+}
+.App-header .fontsizeup {
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 15%;
+  border: 2px solid #093447;
+  background-color: #105170;
+  color: white;
+  font-size: 20px;
+  transition: all .1s linear;
+}
+.App-header .fontsizeup:active {
+  background-color: #0a3042;
+  letter-spacing: 1px;
 }
